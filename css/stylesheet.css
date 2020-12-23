@@ -1,0 +1,429 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@900&display=swap');
+
+/*共通*/
+body{
+  font-family: "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  margin:0px;
+}
+
+li{
+  list-style:none;
+}
+
+ul{
+  padding-left: 0px;
+  margin:0px;
+}
+
+.wrapper
+{
+  max-width: 1100px;
+  margin:0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/*ヘッダー*/
+header{
+  background-color: gray;
+  opacity:0.9;
+  color: white;
+  width: 100%;
+  height:80px;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+}
+
+header .wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header .wrapper h1{
+  cursor: pointer;
+}
+
+header .wrapper ul{
+  display: flex;
+}
+
+header .wrapper ul li{
+  font-size: 1.2rem;
+  padding:0px 15px;
+}
+
+header .wrapper ul li a{
+  text-decoration: none;
+  color:white;
+}
+
+header .wrapper ul li a:hover{
+  color:#91C5D7!important;
+}
+
+header .wrapper i{
+  display: none;
+}
+
+
+/*メイン*/
+/*メイン共通*/
+main{
+background-color: white;
+color: black;
+text-align: center;
+}
+
+main h2{
+  font-size: 3rem;
+  border-bottom:2px solid gray;
+  text-align:center;
+  margin:0px;
+  padding:95px 0px 15px 0px;
+}
+
+
+.fadein{
+  opacity: 0.1;
+  transform: translate(0,50px);
+  transition: all 1s linear;
+}
+
+.scrollin{
+  opacity: 1;
+  transform: translate(0,0);
+}
+
+/*トップ*/
+.main-top{
+  position: relative;
+  text-align: center; 
+  width: 100%; 
+}
+
+.top-img img{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  vertical-align: bottom;
+  margin-left: auto;
+}
+
+.top-img::after{
+  content:"";
+  display: block;
+  position: absolute;
+  top: 0;
+  background-color: black;
+  opacity: 0.4;
+  width: 100%;
+  height: 100vh;
+}
+
+.main-top .top-text{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-top .top-text h2{
+  font-size: 4rem;
+  padding:15px 0px;
+  border:none;
+  color:white;
+}
+
+.typed::after{
+  content:"|";
+  animation:blink 0.7s infinite; 
+}
+
+@keyframes blink{
+  50%{opacity: 0%;}
+}
+
+/*アバウト*/
+.main-about{
+  padding-bottom:80px;
+}
+
+.main-about .wrapper img{
+  display: inline-block;
+  margin-top:20px;
+  border-radius:50%;
+}
+
+.about-contents{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.about-content-left{
+  width: 40%;
+}
+
+.about-content-right{
+  width: 40%;
+}
+
+.about-content-right h3{
+  text-align: left;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #91C5D7;
+}
+
+.profile p{
+  margin: 0 auto;
+  text-align: left;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.skill ul{
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill ul li{
+  width: 25%;
+  margin-bottom: 10px;
+}
+
+.skill ul li i{
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+.qualification ul li{
+  text-align: left;
+}
+
+/* ポートフォリオ */
+.main-works{
+  background-color: #F8F9FA;
+  padding-bottom:80px;
+}
+
+.works-contents{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.works-content{
+  width: 40%;
+  margin: 40px 0;
+  overflow-y: hidden;
+}
+
+.works-content-img{
+  height: 300px;
+  border-radius: 20px;
+  overflow-y: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.works-content-cover{
+  content: "";
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(145,197,215,0.4);
+}
+
+.works-content-text h3{
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/*サービス*/
+.main-services{
+  padding-bottom:80px;
+}
+
+.contents{
+  display: flex;
+  justify-content: space-around;
+  margin:50px auto 0px;
+}
+
+.main-services .content{
+  width: 30%;
+  padding: 20px;
+  box-shadow: 0 0 8px gray;
+  box-sizing: border-box;
+}
+
+.content p{
+  margin: 0 10px 20px;
+  text-align: justify;
+}
+
+.i-con{
+  width: 100px;
+  height: 100px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #91C5D7;
+  color: white;
+  font-size: 3rem;
+}
+
+/* コンタクト */
+.main-contact{
+  background-color: #F8F9FA;
+  padding-bottom:80px;
+}
+
+form{
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-content{
+  margin-bottom:10px ;
+}
+
+.form-text-err{
+  color: red;
+  font-size: 0.5rem;
+}
+
+input, textarea{
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  vertical-align: bottom;
+}
+
+button{
+  position: relative;
+  min-width: 150px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #506e79;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 5px gray;
+  display: block;
+  margin: 0 auto;
+}
+
+button:active{
+  top: 5px;
+  box-shadow: none;
+}
+
+.icon{
+  padding: 15px;
+  margin: 0 5px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+/*PAGE TOP*/
+
+.right{
+  text-align: right;
+  margin-top: 20px;
+}
+
+.return-button{
+  display: inline-block;
+  cursor: pointer;
+}
+
+.fa-angle-double-up{
+  margin-right: 5px;
+}
+
+/*フッター*/
+footer{
+  background-color: gray;
+  color: white;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .wrapper{
+  text-align: center;
+}
+
+footer .wrapper small{
+  display: inline-block;
+  color:gray;
+}
+
+
+/* モーダル */
+.modal-bg{
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.modal{
+  display: none;
+  position: fixed;
+  top: 30px;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background-color: #F8F9FA;
+  padding: 20px;
+  z-index: 100;
+  overflow-y: hidden;
+}
+
+.modal-wrapper{
+  height: 100%;
+}
+
+.modal-img{
+  height: calc(100% - 75px);
+  overflow-y: scroll;
+}
+
+.close-btn{
+  width: 30px;
+  margin-left: auto;
+  text-align: center;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background-color: #91C5D7;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
